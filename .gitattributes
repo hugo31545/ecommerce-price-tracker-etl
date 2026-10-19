@@ -1,0 +1,4 @@
+# Scripts SQL e dumps: sempre LF (o PostgreSQL lê-os corretamente em qualquer sistema)
+*.sql text eol=lf
+# Scripts do Windows: sempre CRLF (o cmd espera este formato)
+*.bat text eol=crlf
