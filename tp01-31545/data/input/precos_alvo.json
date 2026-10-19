@@ -1,0 +1,24 @@
+{
+  "utilizadores_alvos": [
+    {
+      "email": "ana.silva@exemplo.pt",
+      "ean": "5601234000047",
+      "preco_alvo": "105,00 €"
+    },
+    {
+      "email": "ANA.SILVA@exemplo.pt ",
+      "ean": "5601234000078",
+      "preco_alvo": "115"
+    },
+    {
+      "email": "rui.costa@exemplo.pt",
+      "ean": "5601234000085",
+      "preco_alvo": "1.000,00"
+    },
+    {
+      "email": "rui.costa@exemplo",
+      "ean": "5601234000016",
+      "preco_alvo": "105,00"
+    }
+  ]
+}

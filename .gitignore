@@ -1,0 +1,10 @@
+# KNIME (configuração local do workspace)
+tp01-31545/.metadata/
+# Ligação (junction) para a pasta data - recriada por preparar_ambiente.bat
+tp01-31545/dataintegration/01_extracao/data
+# Node-RED (ficheiros locais)
+tp01-31545/src/node-red/node_modules/
+tp01-31545/src/node-red/.flows.json.backup
+tp01-31545/src/node-red/.config*.json
+# Logs técnicos (o log do pipeline, execucoes.csv, é para entregar)
+tp01-31545/data/logs/*.log

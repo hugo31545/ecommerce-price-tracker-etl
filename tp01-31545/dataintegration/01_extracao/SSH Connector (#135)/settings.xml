@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="host" type="xstring" value="localhost"/>
+        <entry key="port" type="xint" value="2222"/>
+        <entry key="maxSessionCount" type="xint" value="8"/>
+        <entry key="maxExecChannelCount" type="xint" value="1"/>
+        <config key="auth">
+            <entry key="type" type="xstring" value="user_pwd_v2"/>
+            <config key="user_pwd_v2">
+                <config key="credentials">
+                    <entry key="isCredentials_Internals" type="xboolean" value="true"/>
+                    <entry key="name" type="xstring" value=""/>
+                    <entry key="login" type="xstring" value="etl"/>
+                    <entry key="weaklyEncryptedPassword" type="xpassword" value="02AwAAAGMq_QxveL1vZ0EBj7I9cRHZp70="/>
+                </config>
+                <entry key="flowVarName_Internals" type="xstring" isnull="true" value=""/>
+            </config>
+            <config key="key">
+                <entry key="user" type="xstring" value="hugom"/>
+                <entry key="passphrase" type="xpassword" value=""/>
+                <entry key="use_passphrase" type="xboolean" value="false"/>
+                <config key="file">
+                    <config key="path">
+                        <entry key="location_present" type="xboolean" value="true"/>
+                        <entry key="file_system_type" type="xstring" value="LOCAL"/>
+                        <entry key="path" type="xstring" value=""/>
+                    </config>
+                    <config key="filter_mode">
+                        <entry key="filter_mode" type="xstring" value="FILE"/>
+                        <entry key="include_subfolders" type="xboolean" value="false"/>
+                        <config key="filter_options">
+                            <entry key="filter_files_extension" type="xboolean" value="false"/>
+                            <entry key="files_extension_expression" type="xstring" value=""/>
+                            <entry key="files_extension_case_sensitive" type="xboolean" value="false"/>
+                            <entry key="filter_files_name" type="xboolean" value="false"/>
+                            <entry key="files_name_expression" type="xstring" value="*"/>
+                            <entry key="files_name_case_sensitive" type="xboolean" value="false"/>
+                            <entry key="files_name_filter_type" type="xstring" value="WILDCARD"/>
+                            <entry key="include_hidden_files" type="xboolean" value="false"/>
+                            <entry key="include_special_files" type="xboolean" value="true"/>
+                            <entry key="filter_folders_name" type="xboolean" value="false"/>
+                            <entry key="folders_name_expression" type="xstring" value="*"/>
+                            <entry key="folders_name_case_sensitive" type="xboolean" value="false"/>
+                            <entry key="folders_name_filter_type" type="xstring" value="WILDCARD"/>
+                            <entry key="include_hidden_folders" type="xboolean" value="false"/>
+                            <entry key="follow_links" type="xboolean" value="true"/>
+                        </config>
+                    </config>
+                    <config key="file_system_chooser__Internals">
+                        <entry key="has_fs_port" type="xboolean" value="false"/>
+                        <entry key="overwritten_by_variable" type="xboolean" value="false"/>
+                        <entry key="convenience_fs_category" type="xstring" value="RELATIVE"/>
+                        <entry key="relative_to" type="xstring" value="knime.workflow"/>
+                        <entry key="mountpoint" type="xstring" value="LOCAL"/>
+                        <entry key="spaceId" type="xstring" value=""/>
+                        <entry key="spaceName" type="xstring" value=""/>
+                        <entry key="custom_url_timeout" type="xint" value="1000"/>
+                        <entry key="connected_fs" type="xboolean" value="true"/>
+                    </config>
+                </config>
+            </config>
+        </config>
+        <entry key="useKnownHosts" type="xboolean" value="false"/>
+        <config key="knownHostsFile">
+            <config key="path">
+                <entry key="location_present" type="xboolean" value="true"/>
+                <entry key="file_system_type" type="xstring" value="LOCAL"/>
+                <entry key="path" type="xstring" value=""/>
+            </config>
+            <config key="filter_mode">
+                <entry key="filter_mode" type="xstring" value="FILE"/>
+                <entry key="include_subfolders" type="xboolean" value="false"/>
+                <config key="filter_options">
+                    <entry key="filter_files_extension" type="xboolean" value="false"/>
+                    <entry key="files_extension_expression" type="xstring" value=""/>
+                    <entry key="files_extension_case_sensitive" type="xboolean" value="false"/>
+                    <entry key="filter_files_name" type="xboolean" value="false"/>
+                    <entry key="files_name_expression" type="xstring" value="*"/>
+                    <entry key="files_name_case_sensitive" type="xboolean" value="false"/>
+                    <entry key="files_name_filter_type" type="xstring" value="WILDCARD"/>
+                    <entry key="include_hidden_files" type="xboolean" value="false"/>
+                    <entry key="include_special_files" type="xboolean" value="true"/>
+                    <entry key="filter_folders_name" type="xboolean" value="false"/>
+                    <entry key="folders_name_expression" type="xstring" value="*"/>
+                    <entry key="folders_name_case_sensitive" type="xboolean" value="false"/>
+                    <entry key="folders_name_filter_type" type="xstring" value="WILDCARD"/>
+                    <entry key="include_hidden_folders" type="xboolean" value="false"/>
+                    <entry key="follow_links" type="xboolean" value="true"/>
+                </config>
+            </config>
+            <config key="file_system_chooser__Internals">
+                <entry key="has_fs_port" type="xboolean" value="false"/>
+                <entry key="overwritten_by_variable" type="xboolean" value="false"/>
+                <entry key="convenience_fs_category" type="xstring" value="RELATIVE"/>
+                <entry key="relative_to" type="xstring" value="knime.workflow"/>
+                <entry key="mountpoint" type="xstring" value="LOCAL"/>
+                <entry key="spaceId" type="xstring" value=""/>
+                <entry key="spaceName" type="xstring" value=""/>
+                <entry key="custom_url_timeout" type="xint" value="1000"/>
+                <entry key="connected_fs" type="xboolean" value="true"/>
+            </config>
+        </config>
+        <entry key="workingDirectory" type="xstring" value="/upload"/>
+        <entry key="connectionTimeout" type="xint" value="30"/>
+    </config>
+    <config key="variables"/>
+    <config key="nodeAnnotation">
+        <entry key="text" type="xstring" value="7C Ligação SFTP"/>
+        <entry key="contentType" type="xstring" value="text/plain"/>
+        <entry key="bgcolor" type="xint" value="16777215"/>
+        <entry key="x-coordinate" type="xint" value="0"/>
+        <entry key="y-coordinate" type="xint" value="0"/>
+        <entry key="width" type="xint" value="0"/>
+        <entry key="height" type="xint" value="0"/>
+        <entry key="alignment" type="xstring" value="CENTER"/>
+        <entry key="borderSize" type="xint" value="0"/>
+        <entry key="borderColor" type="xint" value="0"/>
+        <entry key="defFontSize" type="xint" value="-1"/>
+        <entry key="annotation-version" type="xint" value="20230412"/>
+        <config key="styles"/>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="factory" type="xstring" value="org.knime.ext.ssh.filehandling.node.SshConnectorNodeFactory"/>
+    <entry key="node-name" type="xstring" value="SSH Connector"/>
+    <entry key="node-bundle-name" type="xstring" value="SSH Connector node"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.ext.ssh.filehandling"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.12.0.v202604301321"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Basic File System Connectors"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.filehandling.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.12.0.v202605041104"/>
+    <config key="factory_settings"/>
+    <config key="node_creation_config">
+        <config key="Input File System"/>
+        <config key="SSH File System Connection"/>
+    </config>
+    <entry key="name" type="xstring" value="SSH Connector"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.filehandling.core.port.FileSystemPortObjectSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.filehandling.core.port.FileSystemPortObject"/>
+            <entry key="port_object_summary" type="xstring" value="ssh: 6e97a965-7ba8-4575-a13a-5cfc1fb08e25"/>
+            <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
+            <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="1810efd6-fa27-4189-9e62-8724ad79c8a1"/>
+    </config>
+</config>

@@ -1,0 +1,35 @@
+{
+    "destino": "PT",
+    "lojas": [
+        {
+            "codigo": "PT",
+            "nome": "LojaPT",
+            "pais": "PT",
+            "moeda": "EUR"
+        },
+        {
+            "codigo": "ES",
+            "nome": "TiendaES",
+            "pais": "ES",
+            "moeda": "EUR"
+        },
+        {
+            "codigo": "UK",
+            "nome": "ShopUK",
+            "pais": "GB",
+            "moeda": "GBP"
+        },
+        {
+            "codigo": "US",
+            "nome": "StoreUS",
+            "pais": "US",
+            "moeda": "USD"
+        }
+    ],
+    "importacao": {
+        "limite_baixo_valor_eur": 150,
+        "direito_fixo_baixo_valor_eur": 3,
+        "direito_pct_acima_limite": 0.02,
+        "taxa_desalfandegamento_eur": 2
+    }
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop name="ShopUK" country="GB" currency="GBP">
+  <product ean="5601234000016">
+    <name>Fjallraven Foldsack Backpack 15in</name>
+    <price>£94.56</price>
+    <shipping>£12.00</shipping>
+    <inStock>yes</inStock>
+  </product>
+  <product ean="5601234000030">
+    <name>WD Elements 2TB Portable HDD</name>
+    <price>£53.12</price>
+    <shipping>£12.00</shipping>
+    <inStock>yes</inStock>
+  </product>
+  <product ean="5601234000047">
+    <name>SanDisk SSD Plus 1TB</name>
+    <price>£91.56</price>
+    <shipping>£12.00</shipping>
+    <inStock>yes</inStock>
+  </product>
+  <product ean="5601234000054">
+    <name>Silicon Power 256GB SSD</name>
+    <price>£27.05</price>
+    <shipping>£12.00</shipping>
+    <inStock>yes</inStock>
+  </product>
+  <product ean="5601234000061">
+    <name>WD 4TB Gaming Drive PS4</name>
+    <price>£96.90</price>
+    <shipping>£12.00</shipping>
+    <inStock>no</inStock>
+  </product>
+  <product ean="5601234000078">
+    <name>Acer SB220Q 21.5in Monitor</name>
+    <price>£95.92</price>
+    <shipping>£12.00</shipping>
+    <inStock>yes</inStock>
+  </product>
+  <product ean="5601234000085">
+    <name>Samsung 49in Curved CHG90</name>
+    <price>£829.49</price>
+    <shipping>£29.99</shipping>
+    <inStock>yes</inStock>
+  </product>
+</shop>

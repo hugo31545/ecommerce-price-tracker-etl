@@ -1,0 +1,50 @@
+[
+  {
+    "ean": "5601234000016",
+    "name": "Fjallraven Foldsack Backpack 15in",
+    "price_usd": 103.95,
+    "shipping_usd": 24.99
+  },
+  {
+    "ean": "5601234000023",
+    "name": "Mens Cotton Jacket",
+    "price_usd": 55.99,
+    "shipping_usd": 24.99
+  },
+  {
+    "ean": "5601234000030",
+    "name": "WD Elements 2TB Portable HDD",
+    "price_usd": 59.34,
+    "shipping_usd": 24.99
+  },
+  {
+    "ean": "5601234000047",
+    "name": "SanDisk SSD Plus 1TB",
+    "price_usd": 99.08,
+    "shipping_usd": 24.99
+  },
+  {
+    "ean": "5601234000054",
+    "name": "Silicon Power 256GB SSD",
+    "price_usd": 32.39,
+    "shipping_usd": 24.99
+  },
+  {
+    "ean": "5601234000061",
+    "name": "WD 4TB Gaming Drive PS4",
+    "price_usd": 108.81,
+    "shipping_usd": 24.99
+  },
+  {
+    "ean": "5601234000078",
+    "name": "Acer SB220Q 21.5in Monitor",
+    "price_usd": 115.53,
+    "shipping_usd": 24.99
+  },
+  {
+    "ean": "5601234000085",
+    "name": "Samsung 49in Curved CHG90",
+    "price_usd": 983.1,
+    "shipping_usd": 24.99
+  }
+]

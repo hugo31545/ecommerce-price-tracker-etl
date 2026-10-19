@@ -1,0 +1,429 @@
+[
+    {
+        "id": "tp1tab",
+        "type": "tab",
+        "label": "TP1 ISI - Lojas",
+        "disabled": false,
+        "info": "Fluxos do TP1: conversão YAML->JSON e streaming da loja US"
+    },
+    {
+        "id": "c6bd21bcdd4e13d1",
+        "type": "tab",
+        "label": "Agendamento",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c1",
+        "type": "comment",
+        "z": "tp1tab",
+        "name": "1) Converter configuracao.yaml em configuracao.json (corre uma vez ao arrancar)",
+        "info": "",
+        "x": 290,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "y_inj",
+        "type": "inject",
+        "z": "tp1tab",
+        "name": "ao arrancar",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "y_read"
+            ]
+        ]
+    },
+    {
+        "id": "y_read",
+        "type": "file in",
+        "z": "tp1tab",
+        "name": "ler configuracao.yaml",
+        "filename": "../../data/input/configuracao.yaml",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 300,
+        "y": 80,
+        "wires": [
+            [
+                "y_yaml"
+            ]
+        ]
+    },
+    {
+        "id": "y_yaml",
+        "type": "yaml",
+        "z": "tp1tab",
+        "property": "payload",
+        "name": "YAML -> objeto",
+        "x": 480,
+        "y": 80,
+        "wires": [
+            [
+                "y_json"
+            ]
+        ]
+    },
+    {
+        "id": "y_json",
+        "type": "json",
+        "z": "tp1tab",
+        "name": "objeto -> JSON",
+        "property": "payload",
+        "action": "str",
+        "pretty": true,
+        "x": 660,
+        "y": 80,
+        "wires": [
+            [
+                "y_write"
+            ]
+        ]
+    },
+    {
+        "id": "y_write",
+        "type": "file",
+        "z": "tp1tab",
+        "name": "gravar configuracao.json",
+        "filename": "../../data/input/configuracao.json",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 850,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2",
+        "type": "comment",
+        "z": "tp1tab",
+        "name": "2) Loja US: carregar preços base e simular variações a cada 10 s",
+        "info": "",
+        "x": 280,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "u_inj",
+        "type": "inject",
+        "z": "tp1tab",
+        "name": "ao arrancar",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "u_read"
+            ]
+        ]
+    },
+    {
+        "id": "u_read",
+        "type": "file in",
+        "z": "tp1tab",
+        "name": "ler loja_us_base.json",
+        "filename": "../../data/input/loja_us_base.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "u_parse"
+            ]
+        ]
+    },
+    {
+        "id": "u_parse",
+        "type": "json",
+        "z": "tp1tab",
+        "name": "JSON -> objeto",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "u_load"
+            ]
+        ]
+    },
+    {
+        "id": "u_load",
+        "type": "function",
+        "z": "tp1tab",
+        "name": "guardar preços base",
+        "func": "// Guarda os preços base da loja US na memória do fluxo\nconst base = msg.payload;\nflow.set('precos', base.map(p => ({ ...p, price_usd_base: p.price_usd })));\nnode.status({ fill: 'green', shape: 'dot', text: base.length + ' produtos carregados' });\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "s_inj",
+        "type": "inject",
+        "z": "tp1tab",
+        "name": "a cada 10 s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 260,
+        "wires": [
+            [
+                "s_sim"
+            ]
+        ]
+    },
+    {
+        "id": "s_sim",
+        "type": "function",
+        "z": "tp1tab",
+        "name": "simular variação de preços",
+        "func": "// Simula a variação de preços da loja US (a cada 10 s)\nconst precos = flow.get('precos');\nif (!precos) return null;\nconst agora = new Date().toISOString();\nfor (const p of precos) {\n    let fator = 1 + (Math.random() * 0.06 - 0.03);   // variação normal de ±3%\n    if (Math.random() < 0.05) fator = 0.85;           // 5% de hipótese de promoção relâmpago (-15%)\n    p.price_usd = Math.round(p.price_usd_base * fator * 100) / 100;\n    // formato americano, de propósito, para a Regex limpar no KNIME: $1,049.99\n    p.price_text = '$' + p.price_usd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });\n    p.shipping_text = '$' + p.shipping_usd.toFixed(2);\n    p.updated_at = agora;\n}\nflow.set('precos', precos);\nmsg.payload = precos.map(p => ({ ean: p.ean, name: p.name, price: p.price_text, shipping: p.shipping_text, updated_at: p.updated_at }));\nnode.status({ fill: 'blue', shape: 'ring', text: 'atualizado ' + agora.substring(11, 19) });\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "s_dbg",
+                "s_str"
+            ]
+        ]
+    },
+    {
+        "id": "s_dbg",
+        "type": "debug",
+        "z": "tp1tab",
+        "name": "preços US",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "s_str",
+        "type": "json",
+        "z": "tp1tab",
+        "name": "objeto -> JSON",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 560,
+        "y": 290,
+        "wires": [
+            [
+                "s_log"
+            ]
+        ]
+    },
+    {
+        "id": "s_log",
+        "type": "file",
+        "z": "tp1tab",
+        "name": "acrescentar a loja_us_stream.jsonl",
+        "filename": "../../data/input/loja_us_stream.jsonl",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 810,
+        "y": 290,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3",
+        "type": "comment",
+        "z": "tp1tab",
+        "name": "3) API da loja US para o KNIME: GET http://localhost:1880/loja-us/precos",
+        "info": "",
+        "x": 300,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "h_in",
+        "type": "http in",
+        "z": "tp1tab",
+        "name": "GET /loja-us/precos",
+        "url": "/loja-us/precos",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "h_func"
+            ]
+        ]
+    },
+    {
+        "id": "h_func",
+        "type": "function",
+        "z": "tp1tab",
+        "name": "preços atuais",
+        "func": "// Responde ao KNIME com os preços atuais da loja US\nconst precos = flow.get('precos') || [];\nmsg.payload = precos.map(p => ({\n    ean: p.ean,\n    name: p.name,\n    price: p.price_text || ('$' + p.price_usd),\n    shipping: p.shipping_text || ('$' + p.shipping_usd),\n    updated_at: p.updated_at || null\n}));\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "h_out"
+            ]
+        ]
+    },
+    {
+        "id": "h_out",
+        "type": "http response",
+        "z": "tp1tab",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 550,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "170e10257d12c3b7",
+        "type": "inject",
+        "z": "c6bd21bcdd4e13d1",
+        "name": "De hora a hora",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "d0dfbe6af589f2e7"
+            ]
+        ]
+    },
+    {
+        "id": "d0dfbe6af589f2e7",
+        "type": "exec",
+        "z": "c6bd21bcdd4e13d1",
+        "command": "cmd /c ..\\scripts\\run_pipeline.bat",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Executar pipeline KNIME",
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "546a70fd4506a3e4"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "546a70fd4506a3e4",
+        "type": "debug",
+        "z": "c6bd21bcdd4e13d1",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 140,
+        "wires": []
+    }
+]

@@ -1,0 +1,63 @@
+{
+  "tienda": "TiendaES",
+  "pais": "ES",
+  "moneda": "EUR",
+  "productos": [
+    {
+      "codigo_ean": "5601234000016",
+      "nombre": "Mochila Fjallraven Foldsack 15\"",
+      "precio": "106,65 EUR",
+      "envio": "Gratis",
+      "disponible": true
+    },
+    {
+      "codigo_ean": "5601234000023",
+      "nombre": "Chaqueta Algodón Hombre",
+      "precio": "55,43 EUR",
+      "envio": "6,95 EUR",
+      "disponible": true
+    },
+    {
+      "codigo_ean": "5601234000030",
+      "nombre": "Disco Externo WD Elements 2TB",
+      "precio": "64,64 EUR",
+      "envio": "6,95 EUR",
+      "disponible": true
+    },
+    {
+      "codigo_ean": "5601234000047",
+      "nombre": "SSD SanDisk Plus 1TB",
+      "precio": "104,64 EUR",
+      "envio": "Gratis",
+      "disponible": true
+    },
+    {
+      "codigo_ean": "5601234000054",
+      "nombre": "SSD Silicon Power 256GB",
+      "precio": "34,31 EUR",
+      "envio": "6,95 EUR",
+      "disponible": true
+    },
+    {
+      "codigo_ean": "5601234000061",
+      "nombre": "Disco WD 4TB Gaming PS4",
+      "precio": "114,00 EUR",
+      "envio": "Gratis",
+      "disponible": true
+    },
+    {
+      "codigo_ean": "5601234000078",
+      "nombre": "Monitor Acer SB220Q 21,5\"",
+      "precio": "117,50 EUR",
+      "envio": "Gratis",
+      "disponible": true
+    },
+    {
+      "codigo_ean": "56O1234000035",
+      "nombre": "Cable HDMI 2m",
+      "precio": "9,99 EUR",
+      "envio": "6,95 EUR",
+      "disponible": true
+    }
+  ]
+}
