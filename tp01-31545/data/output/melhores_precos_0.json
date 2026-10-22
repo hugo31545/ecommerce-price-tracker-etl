@@ -5,7 +5,7 @@
   "custo_total_eur" : 36.98,
   "custo_pt" : 36.98,
   "poupanca_pct" : 0.0,
-  "executado_em" : "2026-10-19T23:46:33"
+  "executado_em" : "2026-10-22T21:29:33"
 }, {
   "ean" : "5601234000023",
   "titulo" : "Casaco Algodão Homem",
@@ -13,7 +13,7 @@
   "custo_total_eur" : 57.11,
   "custo_pt" : 57.11,
   "poupanca_pct" : 0.0,
-  "executado_em" : "2026-10-19T23:46:33"
+  "executado_em" : "2026-10-22T21:29:33"
 }, {
   "ean" : "5601234000030",
   "titulo" : "Disco Externo WD Elements 2TB",
@@ -21,7 +21,7 @@
   "custo_total_eur" : 62.72,
   "custo_pt" : 62.72,
   "poupanca_pct" : 0.0,
-  "executado_em" : "2026-10-19T23:46:33"
+  "executado_em" : "2026-10-22T21:29:33"
 }, {
   "ean" : "5601234000047",
   "titulo" : "SSD SanDisk Plus 1TB",
@@ -29,7 +29,7 @@
   "custo_total_eur" : 104.64,
   "custo_pt" : 112.27,
   "poupanca_pct" : 6.8,
-  "executado_em" : "2026-10-19T23:46:33"
+  "executado_em" : "2026-10-22T21:29:33"
 }, {
   "ean" : "5601234000016",
   "titulo" : "Mochila Fjallraven Foldsack 15\"",
@@ -37,7 +37,7 @@
   "custo_total_eur" : 106.65,
   "custo_pt" : 109.95,
   "poupanca_pct" : 3.0,
-  "executado_em" : "2026-10-19T23:46:33"
+  "executado_em" : "2026-10-22T21:29:33"
 }, {
   "ean" : "5601234000061",
   "titulo" : "Disco WD 4TB Gaming PS4",
@@ -45,7 +45,7 @@
   "custo_total_eur" : 110.58,
   "custo_pt" : 110.58,
   "poupanca_pct" : 0.0,
-  "executado_em" : "2026-10-19T23:46:33"
+  "executado_em" : "2026-10-22T21:29:33"
 }, {
   "ean" : "5601234000078",
   "titulo" : "Monitor Acer SB220Q 21,5\"",
@@ -53,7 +53,7 @@
   "custo_total_eur" : 117.5,
   "custo_pt" : 125.9,
   "poupanca_pct" : 6.67,
-  "executado_em" : "2026-10-19T23:46:33"
+  "executado_em" : "2026-10-22T21:29:33"
 }, {
   "ean" : "5601234000085",
   "titulo" : "Monitor Samsung 49 pol. Curvo CHG90",
@@ -61,5 +61,5 @@
   "custo_total_eur" : 1049.99,
   "custo_pt" : 1049.99,
   "poupanca_pct" : 0.0,
-  "executado_em" : "2026-10-19T23:46:33"
+  "executado_em" : "2026-10-22T21:29:33"
 } ]

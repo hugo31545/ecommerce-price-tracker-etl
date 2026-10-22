@@ -2,7 +2,7 @@
 <config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="db_session">
     <config key="Session Info">
         <entry key="version" type="xint" value="7"/>
-        <entry key="sessionID" type="xstring" value="d5944d6a-fd68-41a5-a6ea-12408d7b5bb8"/>
+        <entry key="sessionID" type="xstring" value="f9302a07-1eb8-49ca-971a-15dd4411d2ac"/>
         <entry key="dbTypeId" type="xstring" value="postgres"/>
         <entry key="dialectId" type="xstring" value="postgres"/>
         <entry key="dbURL" type="xstring" value="jdbc:postgresql://localhost:5432/precos"/>
@@ -40,8 +40,8 @@
             <entry key="knime.db.connection.metadata.configure.enabled" type="xboolean" value="false"/>
             <entry key="knime.db.dialect.sql.identifier.delimiting.onlyspaces" type="xboolean" value="false"/>
             <entry key="knime.db.connection.metadata.query.flatten" type="xboolean" value="false"/>
-            <entry key="knime.db.connection.logger.enabled" type="xboolean" value="false"/>
             <entry key="knime.db.connection.restore" type="xboolean" value="false"/>
+            <entry key="knime.db.connection.logger.enabled" type="xboolean" value="false"/>
             <entry key="knime.db.agent.writer.fail_on_missing_in_where_clause" type="xboolean" value="true"/>
         </config>
         <config key="org.knime.database.util.DerivableProperties">

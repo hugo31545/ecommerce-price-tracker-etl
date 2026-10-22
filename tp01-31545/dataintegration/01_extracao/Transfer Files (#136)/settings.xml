@@ -125,6 +125,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="d9506021-cecc-43ff-b45f-1ba9b07a7d97"/>
+        <entry key="file_store_id" type="xstring" value="2d77afc0-d593-4fda-a24f-d3ddb8f05eb8"/>
     </config>
 </config>

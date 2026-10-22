@@ -150,7 +150,7 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.filehandling.core.port.FileSystemPortObjectSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.filehandling.core.port.FileSystemPortObject"/>
-            <entry key="port_object_summary" type="xstring" value="ssh: 6e97a965-7ba8-4575-a13a-5cfc1fb08e25"/>
+            <entry key="port_object_summary" type="xstring" value="ssh: 8c068a22-b65d-4b83-99de-954b790d2514"/>
             <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
             <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
@@ -158,6 +158,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="1810efd6-fa27-4189-9e62-8724ad79c8a1"/>
+        <entry key="file_store_id" type="xstring" value="47d693be-0e6a-4bb2-8716-dce3e3c843f7"/>
     </config>
 </config>

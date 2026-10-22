@@ -275,7 +275,7 @@
                 <config key="0">
                     <entry key="datacell" type="xstring" value="org.knime.core.data.def.StringCell"/>
                     <config key="org.knime.core.data.def.StringCell">
-                        <entry key="StringCell" type="xstring" value="2026-10-19"/>
+                        <entry key="StringCell" type="xstring" value="2026-10-22"/>
                     </config>
                 </config>
             </config>
