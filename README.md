@@ -8,4 +8,4 @@ Trabalho Prático I de Integração de Sistemas de Informação (LESI, 2026/27) 
 
 👉 **Documentação completa, estrutura dos ficheiros e instruções de execução: [`tp01-31545/README.md`](tp01-31545/README.md)**
 
-🎬 Vídeo de demonstração: [_(link a adicionar)_](https://youtu.be/khOgOtvu-xA)
+🎬 Vídeo de demonstração:  https://youtu.be/khOgOtvu-xA
